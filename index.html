@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="player">
+
+    <h2 id="title">Song Title</h2>
+    <p id="artist">Artist Name</p>
+
+    <audio id="audio"></audio>
+
+    <!-- Progress Bar -->
+    <input type="range" id="progress" value="0">
+
+    <div class="time">
+        <span id="currentTime">0:00</span>
+        <span id="duration">0:00</span>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+        <button onclick="prevSong()">⏮</button>
+        <button onclick="playPause()" id="playBtn">▶</button>
+        <button onclick="nextSong()">⏭</button>
+    </div>
+
+    <!-- Volume -->
+    <div class="volume">
+        🔊 <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+    </div>
+
+    <!-- Playlist -->
+    <ul id="playlist"></ul>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
